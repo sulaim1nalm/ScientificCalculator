@@ -56,6 +56,10 @@ public class ScientificCalculator {
                     System.out.println("Base 10 Logarithm");
                     performLogarithmBase10(scanner);
                     break;
+                case 12:
+                    System.out.println("Absolute Value");
+                    performAbsoluteValue(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -129,6 +133,11 @@ public class ScientificCalculator {
     public static double calculateLogarithmBase10(double num){
         return Math.log10(num);
     }
+    public static double calculateAbsoluteValue(double num){
+        return Math.abs(num);
+    }
+
+
 
 
 
@@ -187,33 +196,39 @@ public class ScientificCalculator {
         System.out.println("The result is: " + calculatePower(base, exponent));
     }
 
-    private static void  performSine(Scanner scanner) {
+    private static void performSine(Scanner scanner) {
         System.out.print("Enter a degree: ");
         double degrees = scanner.nextDouble();
         System.out.println("The result is: " + calculateSine(degrees));
     }
 
-    private static void  performCosine(Scanner scanner) {
+    private static void performCosine(Scanner scanner) {
         System.out.print("Enter a degree: ");
         double degrees = scanner.nextDouble();
         System.out.println("The result is: " + calculateCosine(degrees));
     }
 
-    private static void  performTangent(Scanner scanner) {
+    private static void performTangent(Scanner scanner) {
         System.out.print("Enter a degree: ");
         double degrees = scanner.nextDouble();
         System.out.println("The result is: " + calculateTangent(degrees));
     }
 
-    private static void  performNaturalLogarithm(Scanner scanner) {
+    private static void performNaturalLogarithm(Scanner scanner) {
         System.out.print("Enter a number: ");
         double num = scanner.nextDouble();
         System.out.println("The result is: " + calculateNaturalLogarithm(num));
     }
 
-    private static void   performLogarithmBase10(Scanner scanner) {
+    private static void performLogarithmBase10(Scanner scanner) {
         System.out.print("Enter a number: ");
         double num = scanner.nextDouble();
         System.out.println("The result is: " + calculateLogarithmBase10(num));
+    }
+
+    private static void performAbsoluteValue(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+        System.out.println("The result is: " + calculateAbsoluteValue(num));
     }
 }
