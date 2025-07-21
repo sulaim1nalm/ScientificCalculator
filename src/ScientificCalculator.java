@@ -44,6 +44,10 @@ public class ScientificCalculator {
                     System.out.println("Cosine (Degrees)");
                     performCosine(scanner);
                     break;
+                case 9:
+                    System.out.println("tangent (Degrees)");
+                    performTangent(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -107,6 +111,11 @@ public class ScientificCalculator {
         degrees = Math.toRadians(degrees);
         return Math.cos(degrees);
     }
+    public static double calculateTangent(double degrees){
+        degrees = Math.toRadians(degrees);
+        return Math.tan(degrees);
+    }
+
 
 
 
@@ -180,6 +189,12 @@ public class ScientificCalculator {
         System.out.print("Enter a degree: ");
         double degrees = scanner.nextDouble();
         System.out.println("The result is: " + calculateCosine(degrees));
+    }
+
+    private static void  performTangent(Scanner scanner) {
+        System.out.print("Enter a degree: ");
+        double degrees = scanner.nextDouble();
+        System.out.println("The result is: " + calculateTangent(degrees));
     }
 
 
