@@ -60,6 +60,10 @@ public class ScientificCalculator {
                     System.out.println("Absolute Value");
                     performAbsoluteValue(scanner);
                     break;
+                case 13:
+                    System.out.println("Round, Ceiling, Floor");
+                    performRoundCeilFloor(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -135,6 +139,15 @@ public class ScientificCalculator {
     }
     public static double calculateAbsoluteValue(double num){
         return Math.abs(num);
+    }
+    public static long calculateRound(double num){
+        return Math.round(num);
+    }
+    public static double calculateRoundCeil(double num){
+        return Math.ceil(num);
+    }
+    public static double calculateRoundFloor(double num){
+        return Math.floor(num);
     }
 
 
@@ -230,5 +243,13 @@ public class ScientificCalculator {
         System.out.print("Enter a number: ");
         double num = scanner.nextDouble();
         System.out.println("The result is: " + calculateAbsoluteValue(num));
+    }
+
+    public static void performRoundCeilFloor(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+        System.out.println("Round: " + calculateRound(num));
+        System.out.println("Ceiling: " + calculateRoundCeil(num));
+        System.out.println("Floor: " + calculateRoundFloor(num));
     }
 }
