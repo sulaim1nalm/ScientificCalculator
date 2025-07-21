@@ -64,6 +64,10 @@ public class ScientificCalculator {
                     System.out.println("Round, Ceiling, Floor");
                     performRoundCeilFloor(scanner);
                     break;
+                case 14:
+                    System.out.println("Min and Max");
+                    performMinMax(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -149,6 +153,13 @@ public class ScientificCalculator {
     public static double calculateRoundFloor(double num){
         return Math.floor(num);
     }
+    public static double findMin(double num1, double num2){
+        return Math.min(num1, num2);
+    }
+    public static double findMax(double num1, double num2){
+        return Math.max(num1, num2);
+    }
+
 
 
 
@@ -245,11 +256,20 @@ public class ScientificCalculator {
         System.out.println("The result is: " + calculateAbsoluteValue(num));
     }
 
-    public static void performRoundCeilFloor(Scanner scanner) {
+    private static void performRoundCeilFloor(Scanner scanner) {
         System.out.print("Enter a number: ");
         double num = scanner.nextDouble();
         System.out.println("Round: " + calculateRound(num));
         System.out.println("Ceiling: " + calculateRoundCeil(num));
         System.out.println("Floor: " + calculateRoundFloor(num));
+    }
+
+    private static void performMinMax(Scanner scanner) {
+        System.out.print("Enter the first number number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter the second number number: ");
+        double num2 = scanner.nextDouble();
+        System.out.println("minimum: " + findMin(num1, num2));
+        System.out.println("maximum: " + findMax(num1, num2));
     }
 }
