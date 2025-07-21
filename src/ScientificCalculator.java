@@ -1,4 +1,3 @@
-import java.nio.channels.ScatteringByteChannel;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -68,11 +67,13 @@ public class ScientificCalculator {
                     System.out.println("Min and Max");
                     performMinMax(scanner);
                     break;
+                case 15:
+                    System.out.println("Exit");
+                    scanner.close();
+                    return;
                 default:
                     System.out.println("Invalid choice!");
             }
-
-
         }
     }
 
@@ -159,11 +160,6 @@ public class ScientificCalculator {
     public static double findMax(double num1, double num2){
         return Math.max(num1, num2);
     }
-
-
-
-
-
 
 
     //-----those are the methods that will handle user input----
