@@ -52,6 +52,10 @@ public class ScientificCalculator {
                     System.out.println("Natural Logarithm");
                     performNaturalLogarithm(scanner);
                     break;
+                case 11:
+                    System.out.println("Base 10 Logarithm");
+                    performLogarithmBase10(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -122,6 +126,10 @@ public class ScientificCalculator {
     public static double calculateNaturalLogarithm(double num){
         return Math.log(num);
     }
+    public static double calculateLogarithmBase10(double num){
+        return Math.log10(num);
+    }
+
 
 
 
@@ -201,5 +209,11 @@ public class ScientificCalculator {
         System.out.print("Enter a number: ");
         double num = scanner.nextDouble();
         System.out.println("The result is: " + calculateNaturalLogarithm(num));
+    }
+
+    private static void   performLogarithmBase10(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+        System.out.println("The result is: " + calculateLogarithmBase10(num));
     }
 }
