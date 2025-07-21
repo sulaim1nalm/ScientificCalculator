@@ -9,11 +9,11 @@ public class ScientificCalculator {
 
         while (true) {
             displayMenu();
-            getUserInput(scanner);
-            int op=scanner.nextInt();
+            int op = getUserInput(scanner);
             switch(op) {
                 case 1:
-                    System.out.println("addition");
+                    System.out.println("Addition");
+                    performAddition(scanner);
                     break;
                 case 2:
                     System.out.println("substraction");
@@ -50,7 +50,33 @@ public class ScientificCalculator {
 
     public static int getUserInput(Scanner scanner) {
         System.out.println("choose the operation:");
-        int choice = scanner.nextInt(); // Reads an integer
-        return choice;
+        // Reads an integer
+        return scanner.nextInt();
     }
+
+    //------Those are the methods for pure math----------
+
+    //------Basic Arithmetic------
+    public static double add(double num1, double num2){
+        return num1 + num2;
+    }
+
+
+
+
+
+
+
+
+    //-----those are the methods that will handle user input----
+    // --- Helper Methods for User Interaction (calling from main's switch-case) ---
+
+    private static void performAddition(Scanner scanner) {
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+        System.out.println("The result is: " + add(num1, num2));
+    }
+
 }
