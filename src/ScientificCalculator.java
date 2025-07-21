@@ -40,6 +40,10 @@ public class ScientificCalculator {
                     System.out.println("Sine (Degrees)");
                     performSine(scanner);
                     break;
+                case 8:
+                    System.out.println("Cosine (Degrees)");
+                    performCosine(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -99,6 +103,11 @@ public class ScientificCalculator {
         degrees = Math.toRadians(degrees);
         return Math.sin(degrees);
     }
+    public static double calculateCosine(double degrees){
+        degrees = Math.toRadians(degrees);
+        return Math.cos(degrees);
+    }
+
 
 
 
@@ -165,6 +174,12 @@ public class ScientificCalculator {
         System.out.print("Enter a degree: ");
         double degrees = scanner.nextDouble();
         System.out.println("The result is: " + calculateSine(degrees));
+    }
+
+    private static void  performCosine(Scanner scanner) {
+        System.out.print("Enter a degree: ");
+        double degrees = scanner.nextDouble();
+        System.out.println("The result is: " + calculateCosine(degrees));
     }
 
 
