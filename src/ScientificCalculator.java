@@ -48,6 +48,10 @@ public class ScientificCalculator {
                     System.out.println("tangent (Degrees)");
                     performTangent(scanner);
                     break;
+                case 10:
+                    System.out.println("Natural Logarithm");
+                    performNaturalLogarithm(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -115,13 +119,9 @@ public class ScientificCalculator {
         degrees = Math.toRadians(degrees);
         return Math.tan(degrees);
     }
-
-
-
-
-
-
-
+    public static double calculateNaturalLogarithm(double num){
+        return Math.log(num);
+    }
 
 
 
@@ -197,5 +197,9 @@ public class ScientificCalculator {
         System.out.println("The result is: " + calculateTangent(degrees));
     }
 
-
+    private static void  performNaturalLogarithm(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        double num = scanner.nextDouble();
+        System.out.println("The result is: " + calculateNaturalLogarithm(num));
+    }
 }
