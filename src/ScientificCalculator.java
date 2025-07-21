@@ -21,6 +21,7 @@ public class ScientificCalculator {
                     break;
                 case 3:
                     System.out.println("Multiplication");
+                    performMultiplication(scanner);
                     break;
 
                 default:
@@ -64,6 +65,9 @@ public class ScientificCalculator {
     public static double subtract(double num1, double num2){
         return num1 - num2;
     }
+    public static double multiply(double num1, double num2){
+        return num1 * num2;
+    }
 
 
     //-----those are the methods that will handle user input----
@@ -83,6 +87,14 @@ public class ScientificCalculator {
         System.out.print("Enter second number: ");
         double num2 = scanner.nextDouble();
         System.out.println("The result is: " + subtract(num1, num2));
+    }
+
+    private static void performMultiplication(Scanner scanner) {
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+        System.out.println("The result is: " + multiply(num1, num2));
     }
 
 }
