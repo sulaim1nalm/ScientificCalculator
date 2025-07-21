@@ -36,6 +36,10 @@ public class ScientificCalculator {
                     System.out.println("Power Function");
                     performPower(scanner);
                     break;
+                case 7:
+                    System.out.println("Sine (Degrees)");
+                    performSine(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -91,6 +95,15 @@ public class ScientificCalculator {
     public static double calculatePower(double base, double exponent){
         return Math.pow(base, exponent);
     }
+    public static double calculateSine(double degrees){
+        degrees = Math.toRadians(degrees);
+        return Math.sin(degrees);
+    }
+
+
+
+
+
 
 
 
@@ -147,4 +160,12 @@ public class ScientificCalculator {
         double exponent = scanner.nextDouble();
         System.out.println("The result is: " + calculatePower(base, exponent));
     }
+
+    private static void  performSine(Scanner scanner) {
+        System.out.print("Enter a degree: ");
+        double degrees = scanner.nextDouble();
+        System.out.println("The result is: " + calculateSine(degrees));
+    }
+
+
 }
