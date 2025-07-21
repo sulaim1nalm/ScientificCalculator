@@ -1,3 +1,4 @@
+import java.nio.channels.ScatteringByteChannel;
 import java.util.Scanner;
 import java.util.InputMismatchException;
 
@@ -23,7 +24,10 @@ public class ScientificCalculator {
                     System.out.println("Multiplication");
                     performMultiplication(scanner);
                     break;
-
+                case 4:
+                    System.out.println("Division");
+                    performDivision(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -68,6 +72,9 @@ public class ScientificCalculator {
     public static double multiply(double num1, double num2){
         return num1 * num2;
     }
+    public static double divide(double num1, double num2){
+        return num1/num2;
+    }
 
 
     //-----those are the methods that will handle user input----
@@ -96,5 +103,21 @@ public class ScientificCalculator {
         double num2 = scanner.nextDouble();
         System.out.println("The result is: " + multiply(num1, num2));
     }
+
+    private static void performDivision(Scanner scanner) {
+        System.out.print("Enter first number: ");
+        double num1 = scanner.nextDouble();
+        System.out.print("Enter second number: ");
+        double num2 = scanner.nextDouble();
+        System.out.println("The result is: " + divide(num1, num2));
+        try {
+            num2=0;
+        }
+        catch (InputMismatchException e){
+            System.out.println("Invalid input!");
+        }
+    }
+
+
 
 }
