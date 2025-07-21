@@ -28,6 +28,10 @@ public class ScientificCalculator {
                     System.out.println("Division");
                     performDivision(scanner);
                     break;
+                case 5:
+                    System.out.println("SquareRoot");
+                    performSquareRoot(scanner);
+                    break;
                 default:
                     System.out.println("Invalid choice!");
             }
@@ -76,6 +80,11 @@ public class ScientificCalculator {
         return num1/num2;
     }
 
+    //------- Scientific Math Methods ----
+    public static double calculateSquareRoot(double num){
+        return Math.sqrt(num);
+    }
+
 
     //-----those are the methods that will handle user input----
     // --- Helper Methods for User Interaction (calling from main's switch-case) ---
@@ -116,6 +125,12 @@ public class ScientificCalculator {
         catch (InputMismatchException e){
             System.out.println("Invalid input!");
         }
+    }
+
+    private static void performSquareRoot(Scanner scanner) {
+        System.out.print("Enter a number: ");
+        double num1 = scanner.nextDouble();
+        System.out.println("The result is: " + calculateSquareRoot(num1));
     }
 
 
